@@ -3,28 +3,47 @@
 namespace App\Http\Controllers;
 use App\status;
 use App\Page;
+use App\CategaryProduct;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PageController extends Controller
 {
+    public function __construct(){
+        $this->middleware(function($request , $next){
+            session(['Model_active' =>'pages']);
+           return $next($request);
+        });
+    }
     public function list(Request $request)
     {
+
             if(!empty($request->input('status')))
             {
-                if($request->input('status') == 'active')
+                $status =$request->input('status');
+                if($status == 'all')
+                {
+                    $list_page = Page::paginate(10);
+                    $list_page->appends(['status' => $status]);
+                    $list_check=[0=>'Công khai',1=>'Chờ Duyệt' ,2=>'Xoá Tạm Thời' ,3=>'Xoá Vĩnh Viễn'];
+                }
+                if($status == 'active')
                 {
                     $list_page = Page::where('status_id' , 1)->paginate(10);
+                    $list_page->appends(['status' => $status]);
                     $list_check=[1=>'Chờ Duyệt' ,2=>'Xoá Tạm Thời' ,3=>'Xoá Vĩnh Viễn'];
                 }
-                if($request->input('status') == 'queue')
+                if($status == 'queue')
                 {
                     $list_page = Page::where('status_id' , 2)->paginate(10);
+                    $list_page->appends(['status' => $status]);
                     $list_check=[0=>'Công Khai' ,2=>'Xoá Tạm Thời' ,3=>'Xoá Vĩnh Viễn'];
                 }
-                if($request->input('status') == 'trash')
+                if($status == 'trash')
                 {
                     $list_page = Page::onlyTrashed()->paginate(10);
+                    $list_page->appends(['status' => $status]);
                     $list_check=[5=>'Khôi phục' ,3=>'Xoá vĩnh viễn'];
                 }
             }else
@@ -34,16 +53,15 @@ class PageController extends Controller
                   {
                        $key_word =$request->input('keyword');
                   }
-                  $list_page = Page::where([
-                    ['status_id' , 1],
-                    ['page_title' , 'LIKE' ,"%{$key_word}%"]
-                    ])->paginate(10);
-                $list_check = [1=>'Chờ Duyệt' ,2=>'Xoá Tạm Thời' ,3=>'Xoá Vĩnh Viễn'];
+                  $list_page = Page::where('page_title' , 'LIKE' ,"%{$key_word}%")->paginate(10);
+                  $list_page->appends(['keyword' => $key_word]);
+                  $list_check=[0=>'Công khai',1=>'Chờ Duyệt' ,2=>'Xoá Tạm Thời' ,3=>'Xoá Vĩnh Viễn'];
             }
             $count_active = Page::where('status_id' , 1)->count();
             $count_queue = Page::where('status_id' , 2)->count();
             $count_trash =Page::onlyTrashed()->count();
-            $count = [$count_active , $count_queue ,$count_trash];
+            $count_all = Page::all()->count();
+            $count = [$count_active , $count_queue ,$count_trash , $count_all];
             return \view('admin.page.list' , \compact('list_page' , 'list_check' , 'count'));
     }
 
@@ -94,10 +112,7 @@ class PageController extends Controller
             if(!empty($request->input('id'))){
                 $id =$request->input('id');
             }
-                $page_by_id = Page::where([
-                    'status_id'=>1,
-                    'id'=>$id,
-                ])->first();
+                $page_by_id = Page::where('id', $id)->first();
                 $array_page_id = [
                     'fullName' =>$page_by_id->user->name,
                     'id' => $page_by_id->id,
@@ -119,7 +134,6 @@ class PageController extends Controller
             $request->validate([
 
                 'name' =>'required',
-                'slug' =>'required',
                 'content' =>'required',
                 'status' =>'required',
             ],
@@ -134,7 +148,7 @@ class PageController extends Controller
         );
             Page::create([
                 'page_title'=>$request->input('name'),
-                'slug'=>$request->input('slug'),
+                'slug'=>empty($request->input('slug'))?Str::slug($request->input('name')):$request->input('slug'),
                 'content'=>$request->input('content'),
                 'status_id'=>$request->input('status'),
                 'user_id'=>Auth::user()->id,
@@ -181,4 +195,21 @@ class PageController extends Controller
             return \redirect('admin/page/list')->with('status','Bạn đã xoá tạm thời thành công');
         }
     //
+
+    #Client
+    public function introduce( $slug)
+    {
+            if(!empty($slug))
+            {
+                $page_id = Page::where([
+                    'status_id' =>1,
+                    'slug'=>$slug,
+                ])->first();
+            }
+            $categary_pro = CategaryProduct::where('status_id',1)->get();
+            return \view('client.page.page' , \compact('page_id' ,'categary_pro'));
+    }
 }
+
+//
+

@@ -18,6 +18,11 @@ class CreateCategaryPostsTable extends Migration
             $table->string('name' , 255);
             $table->string('slug' ,255);
             $table->unsignedBigInteger('status_id');
+            $table->foreign('status_id')->references('id')->on('statuses')->onDelete('cascade');
+            $table->integer('parent_id');
+            $table->foreign('parent_id')->references('id')->on('categary_posts')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -31,4 +36,5 @@ class CreateCategaryPostsTable extends Migration
     {
         Schema::dropIfExists('categary_posts');
     }
+
 }

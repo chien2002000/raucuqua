@@ -21,6 +21,7 @@
                     <div class="form-text text-danger">{{ $message }}</div>
                     @enderror
                     <input class="form-control" type="text" name="slug" id="slug">
+                    <div class="tooltip1">Bạn có thể bỏ trống.Slug sẽ được thay thế bằng tên danh mục</div>
                 </div>
                 <div class="form-group">
                     <label for="content">Nội dung trang</label>
@@ -52,4 +53,21 @@
         </div>
     </div>
 </div>
+<style>
+    .tooltip1{
+        width: 200px;
+    font-size: 13px;
+    background: black;
+    color: white;
+    padding: 5px;
+    margin-left: 43px;
+    border-radius: 5px;
+    display:  none;
+    z-index: 3;
+}
+    .active{
+        display: block;
+    }
+    }
+</style>
 @endsection

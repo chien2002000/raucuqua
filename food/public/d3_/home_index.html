@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html itemscope itemtype="https://schema.org/WebSite" lang="vi">  
+<head>
+    <title>Thực phẩm sạch</title>
+    <meta charset="UTF-8">
+    <meta name="robots" content="INDEX,FOLLOW">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/page.0.1.1.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script language="javascript" src="js/jquery.min.js"></script>
+	<script language="javascript" src="js/slick.min.js"></script>
+</head>
+<body>
+    <header>
+		<div class="container">
+			<div class="top_hdr">
+				<h2>
+					Tư vấn miễn phí 24/7 : (+84) 466.819.555
+				</h2>
+			</div>
+		</div>
+		<div class="mid_hdr">
+			<div class="container">
+				<div class="row">
+					<div class="span3 plr10 span-m12">
+						<h1 class="logo">
+							<a href="">
+								<img src="img/logo.png" alt="">siêu thị hạt giống nhập khẩu
+							</a>
+						</h1>
+					</div>
+					<div class="span9 plr10 span-m12">
+						<div class="mid_hdr_right">
+							<form class="form_search" action="" method="get" value="">
+								<input type="search" class="search_field" name="" placeholder="Tìm Sản Phẩm ..."/>
+								<input type="submit" class="search_submit" value="Tìm kiếm" />
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bot_hdr">
+			<div class="container">
+				<nav>
+					<ul class="nav_lv0 nostyle t-off m-off">
+						<li class="active"><a href="/" rel="nofollow">Trang chủ</a></li>
+						<li><a href="/">Giới thiệu</a></li>
+						<li>
+							<a href="">Sản Phẩm<i class="fa fa-angle-down"></i></a>
+							<ul class="nav_lv1">
+								<li><a href="/">Rau-Củ-Quả</a></li>
+								<li><a href="/">Sữa-kem và sản phẩm từ sữa</a></li>
+								<li><a href="/">Bánh kẹo-đồ ăn vặt-giải khát</a></li>
+							</ul>
+						</li>
+						<li><a href="/">Blog kiến thức</a></li>
+						<li><a href="/">Thông tin thanh toán</a></li>
+					</ul>
+					<div class="bar"><a><i class="fa fa-bars" aria-hidden="true"></i></a></div>
+					<ul class="mnav nostyle">
+						<li><a href="/" rel="nofollow">Trang chủ</a></li>
+						<li><a href="/">Giới thiệu</a></li>
+						<li class="hv">
+							<a href="">Sản Phẩm</a>
+							<ul class="mnav_1">
+								<li><a href="/">Rau-Củ-Quả</a></li>
+								<li><a href="/">Sữa-kem và sản phẩm từ sữa</a></li>
+								<li><a href="/">Bánh kẹo-đồ ăn vặt-giải khát</a></li>
+							</ul>
+						</li>
+						<li><a href="/">Blog kiến thức</a></li>
+						<li><a href="/">Thông tin thanh toán</a></li>
+					</ul>
+					<div class="cart_hdr_tm t-on m-on">
+						<a href="#" rel="nofollow">
+							<i class="fa fa-shopping-cart"></i>
+							<span>1</span>
+						</a>
+					</div>
+					<div class="cart_hdr t-off m-off">
+						<a href="" rel="nofollow"><i class="fa fa-shopping-cart"></i>
+						<span >(0)Sản phẩm</span>
+						</a>
+					</div>
+				</nav>	
+				<script>
+				$(".bar>a").click(function(){	
+				$(".mnav").toggleClass("dropdown");	});
+				$(".hv>a").click(function(event){	event.preventDefault();	
+				if($(this).parent().hasClass("dropdown")){	$(this).parent().removeClass("dropdown");
+				$(this).siblings().children().removeClass("dropdown");	}else{	
+				$(this).parent().addClass("dropdown");	$(this).parent().siblings().removeClass("dropdown");	
+				$(this).parent().siblings().children().children().removeClass("dropdown");	}	return false;
+				});	$(document).mouseup(function (e){	var container = $('.mnav , .bar');	
+				if (!container.is(e.target) && container.has(e.target).length === 0){	
+				$('.mnav').removeClass('dropdown');	}	
+				});
+				</script>				
+			</div>
+		</div>
+    </header>
+    <div class="content_for_layout">
+		<div class="container mb20">
+			<div class="row">
+				<div class="span9 plr10 span-m12 span-t12">
+					<div class="slide_home arr_bx">
+						<a><img src="img/1.png" alt=""></a>
+						<a><img src="img/2.png" alt=""></a>
+						<a><img src="img/1.png" alt=""></a>
+						<a><img src="img/2.png" alt=""></a>
+					</div>
+				</div>
+				<script>
+					$(document).ready(function(){
+					$('.slide_home').slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					autoplay: true,
+					autoplaySpeed: 2000,
+					});
+					});
+				</script>
+				<div class="span3 plr10 m-off t-off">
+					<div class="cate_main">
+						<ul>
+							<li><a href=""><img src="img/3.jpg" alt=""></a></li>
+							<li><a href=""><img src="img/4.jpg" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="fixf mb20">
+			<div class="container">
+				<div class="block_cate_home">
+					<div class="head_cate">
+						<h3>Sản Phẩm Nổi Bật</h3>
+					</div>
+					<div class="body_cate">
+						<div class="row">
+							<ul class="block_prd">
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/8.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span>1,390,000 ₫</span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/8.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span></span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>	
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/8.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span></span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>	
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/8.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span>1,390,000 ₫</span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/8.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span></span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>	
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/8.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span>1,390,000 ₫</span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>	
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/8.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span>1,390,000 ₫</span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/8.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span>1,390,000 ₫</span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>	
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/8.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span>1,390,000 ₫</span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>	
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/8.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span>1,390,000 ₫</span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>							
+							</ul>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="fixf mb20">
+			<div class="container">
+				<div class="block_cate_home">
+					<div class="head_cate">
+						<h3>Bánh kẹo đồ ăn vặt giải khát</h3>
+					</div>
+					<div class="body_cate">
+						<div class="row">
+							<ul class="block_prd">
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/7.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span>1,390,000 ₫</span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/7.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span>1,390,000 ₫</span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/7.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span>1,390,000 ₫</span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/7.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span>1,390,000 ₫</span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>
+								<li class="wrapper_prd p10">
+									<div class="item_prd">
+										<div class="image">
+											<span class="percen">-30%</span>
+											<a href=""><img src="img/7.jpg" alt=""></a>
+										</div>	
+										<div class="info"> 
+											<h4><a href="">MÁY IN CANON E400 MÀU ĐEN</a></h4> 
+											<p class="price"> 
+												1,000,000 ₫
+												<span>1,390,000 ₫</span>
+											</p> 
+											<p class="txt_center">
+												<a href="" class="btn add_cart" rel="nofollow"><i class="fa fa-shopping-cart"></i>MUA HÀNG</a>
+											</p> 
+										</div>
+									</div>
+								</li>							
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="fixf mb20">
+			<div class="container">
+				<div class="row">
+					<div class="span6 plr10 span-m12">
+						<div class="panel_default fixf">
+							<div class="head_cate">
+								<h3>bánh kẹo đồ ăn vặt giải khát</h3>
+							</div>
+							<div class="body_cate fixf">
+								<div class="block_new">
+									<div class="clearfix item_new">
+										<div class="image_new plr10 mb10 span4 span-m12">
+											<a href=""><img src="img/13.jpg" alt=""></a>
+										</div>
+										<div class="info plr10 span8 span-m12">	
+											<h4>
+												<a href="">Nhận biết dâu đà lạt và dâu trung quốc</a>
+											</h4>
+											<p>Bạn chịu khó để ý chút xíu về màu sắc, kích thước, hương vị…là có thể nhận ra ngay đâu 
+											là dâu tây Đà Lạt và loại nào là dâu tây Trung Quốc Dâu tây ngày nay được dùng để chế biến ...
+											</p>
+											<p class="link_watch">
+												<a href="" rel="nofollow">[ Xem thêm ]</a>
+											</p>
+										</div>
+									</div>
+									<ul>
+										<li><a href="">Giới thiệu về dâu tây Đà Lạt</a></li>
+										<li><a href="">Phân biệt khoai tây Đà Lạt với khoai Trung Quốc</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="span6 plr10 span-m12">
+						<div class="panel_default fixf">
+							<div class="head_cate">
+								<h3>bánh kẹo đồ ăn vặt giải khát</h3>
+							</div>
+							<div class="body_cate fixf">
+								<div class="block_new">
+									<div class="clearfix item_new">
+										<div class="image_new plr10 mb10 span4 span-m12">
+											<a href=""><img src="img/13.jpg" alt=""></a>
+										</div>
+										<div class="info plr10 span8 span-m12">	
+											<h4>
+												<a href="">Nhận biết dâu đà lạt và dâu trung quốc</a>
+											</h4>
+											<p>Bạn chịu khó để ý chút xíu về màu sắc, kích thước, hương vị…là có thể nhận ra ngay đâu 
+											là dâu tây Đà Lạt và loại nào là dâu tây Trung Quốc Dâu tây ngày nay được dùng để chế biến ...
+											</p>
+											<p class="link_watch">
+												<a href="" rel="nofollow">[ Xem thêm ]</a>
+											</p>
+										</div>
+									</div>
+									<ul>
+										<li><a href="">Giới thiệu về dâu tây Đà Lạt</a></li>
+										<li><a href="">Phân biệt khoai tây Đà Lạt với khoai Trung Quốc</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>		
+    </div>
+	<div class="container">
+		<ul class="fixf owl arr_bx trademark nostyle"> 
+			<li><a href=""><img src="img/5.jpg" alt=""></a></li>
+			<li><a href=""><img src="img/5.jpg" alt=""></a></li>
+			<li><a href=""><img src="img/5.jpg" alt=""></a></li>
+			<li><a href=""><img src="img/5.jpg" alt=""></a></li>
+			<li><a href=""><img src="img/5.jpg" alt=""></a></li>
+			<li><a href=""><img src="img/5.jpg" alt=""></a></li>
+		</ul>
+	</div>
+	<script>
+	$(document).ready(function(){
+	$('.trademark').slick({
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	autoplay: false,
+	autoplaySpeed: 2000,
+	responsive: [{ breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 2, } },]
+	});
+	});
+	</script>
+    <footer>
+		<div class="container">
+			<div class="top_ft fixf center plr10 ptb10 mb20">
+				<div class="form_email">
+					<div class="span6 span-m12"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+						<h3>Đăng ký nhận email của chúng tôi</h3>
+						<p>Để nhận ngay những chương trình khuyễn mãi</p>
+					</div>
+					<div class="span6 span-m12">
+						<form action="" method="post">
+							<input type="email" name="email" placeholder="Nhập email của bạn... ">
+							<button type="submit">Đăng ký</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="mid_ft">
+				<div class="row">
+					<div class="span6 plr10 span-m12 mb20">
+						<div class="image span-m12 mb10">
+							<a href=""><img src="img/logo.png" alt=""></a>
+						</div>
+						<div class="info">
+							<p><strong><i class="fa fa-map-marker" aria-hidden="true"></i>Địa chỉ:</strong> Số 19 ngõ 52 Khu phố Thượng, Từ Sơn, Bắc Ninh.</p>
+							<p><strong><i class="fa fa-phone" aria-hidden="true"></i>Điện thoại:</strong> 098 851 155-<strong>hotline:</strong>09888511556</p>
+							<p><strong><i class="fa fa-envelope" aria-hidden="true"></i>Email:</strong> support@gmail.com</p>
+							<p><strong><i class="fa fa-globe" aria-hidden="true"></i>website:</strong>demo.vn</p>
+						</div>
+					</div>
+					<div class="span6 mb20 span-m12">
+						<div class="span6 span-m12 plr10 mb20">
+							<h3>Thông tin hỗ trợ</h3>
+							<ul class="list_link">
+								<li><a href="">Giới thiệu</a></li>
+								<li><a href="">Thông tin thanh toán</a></li>
+								<li><a href="">Kiểm tra đơn hàng</a></li>
+								<li><a href="">Trung tâm hỗ trợ khách hàng</a></li>
+							</ul>
+						</div>
+						<div class="span6 span-m12 plr10 mb20">
+							<h3>chính sách</h3>
+							<ul class="list_link">
+								<li><a href="">Chính sách bảo hành </a></li>
+								<li><a href="">Chính sách đổi trả</a></li>
+								<li><a href="">Chính sách giao hàng</a></li>
+								<li><a href="">Chính sách thanh toán</a></li>
+								<li><a href="">Chính sách khách hàng</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bot_ft">
+                <p>© Copyright kars group</p>
+                <p style="float:right">Design by <a href="" target="_blank" style="color:#fff">kars Group</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

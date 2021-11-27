@@ -18,6 +18,7 @@
         </div>
         <div class="card-body">
             <div class="analytic">
+                <a href="{{request()->fullUrlWithQuery(['status'=>'all'])}}" class="text-primary">Tất cả<span class="text-muted">({{ $count[3] }})</span></a>
                 <a href="{{request()->fullUrlWithQuery(['status'=>'active'])}}" class="text-primary">Công khai<span class="text-muted">({{ $count[0] }})</span></a>
                 <a href="{{request()->fullUrlWithQuery(['status'=>'queue'])}}" class="text-primary">Chờ duyệt<span class="text-muted">({{ $count[1] }})</span></a>
                 <a href="{{request()->fullUrlWithQuery(['status'=>'trash'])}}" class="text-primary">Thùng rác<span class="text-muted">({{ $count[2] }})</span></a>
@@ -81,7 +82,7 @@
                         </td>
                         <td>
                             <a href="{{ route('page/edit' , $item->id) }}" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                            <a href="{{ route('page/delete' , $item->id) }}" class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
+                            <a href="{{ route('page/delete' , $item->id) }}" onclick="return confirm('Bạn có muốn xoá trang này không ?')" class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
                         </td>
                         @endif
                     </tr>

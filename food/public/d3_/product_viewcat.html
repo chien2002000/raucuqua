@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html itemscope itemtype="https://schema.org/WebSite" lang="vi">
+<head>
+    <title>Thực phẩm sạch</title>
+    <meta charset="UTF-8">
+    <meta name="robots" content="INDEX,FOLLOW">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/page.0.1.1.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script language="javascript" src="js/jquery.min.js"></script>
+	<script language="javascript" src="js/slick.min.js"></script>
+</head>
+<body>
+    <header>
+		<div class="container">
+			<div class="top_hdr">
+				<h2>
+					Tư vấn miễn phí 24/7 : (+84) 466.819.555
+				</h2>
+			</div>
+		</div>
+		<div class="mid_hdr">
+			<div class="container">
+				<div class="row">
+					<div class="span3 plr10 span-m12">
+						<h1 class="logo">
+							<a href="">
+								<img src="img/logo.png" alt="">siêu thị hạt giống nhập khẩu
+							</a>
+						</h1>
+					</div>
+					<div class="span9 plr10 span-m12">
+						<div class="mid_hdr_right">
+							<form class="form_search" action="" method="get" value="">
+								<input type="search" class="search_field" name="" placeholder="Tìm Sản Phẩm ..."/>
+								<input type="submit" class="search_submit" value="Tìm kiếm" />
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bot_hdr">
+			<div class="container">
+				<nav>
+					<ul class="nav_lv0 nostyle t-off m-off">
+						<li class="active"><a href="/" rel="nofollow">Trang chủ</a></li>
+						<li><a href="/">Giới thiệu</a></li>
+						<li>
+							<a href="">Sản Phẩm<i class="fa fa-angle-down"></i></a>
+							<ul class="nav_lv1">
+								<li><a href="/">Rau-Củ-Quả</a></li>
+								<li><a href="/">Sữa-kem và sản phẩm từ sữa</a></li>
+								<li><a href="/">Bánh kẹo-đồ ăn vặt-giải khát</a></li>
+							</ul>
+						</li>
+						<li><a href="/">Blog kiến thức</a></li>
+						<li><a href="/">Thông tin thanh toán</a></li>
+					</ul>
+					<div class="bar"><a><i class="fa fa-bars" aria-hidden="true"></i></a></div>
+					<ul class="mnav nostyle">
+						<li><a href="/" rel="nofollow">Trang chủ</a></li>
+						<li><a href="/">Giới thiệu</a></li>
+						<li class="hv">
+							<a href="">Sản Phẩm</a>
+							<ul class="mnav_1">
+								<li><a href="/">Rau-Củ-Quả</a></li>
+								<li><a href="/">Sữa-kem và sản phẩm từ sữa</a></li>
+								<li><a href="/">Bánh kẹo-đồ ăn vặt-giải khát</a></li>
+							</ul>
+						</li>
+						<li><a href="/">Blog kiến thức</a></li>
+						<li><a href="/">Thông tin thanh toán</a></li>
+					</ul>
+					<div class="cart_hdr_tm t-on m-on">
+						<a href="#" rel="nofollow">
+							<i class="fa fa-shopping-cart"></i>
+							<span>1</span>
+						</a>
+					</div>
+					<div class="cart_hdr t-off m-off">
+						<a href="" rel="nofollow"><i class="fa fa-shopping-cart"></i>
+						<span >(0)Sản phẩm</span>
+						</a>
+					</div>
+				</nav>
+				<script>
+				$(".bar>a").click(function(){
+				$(".mnav").toggleClass("dropdown");	});
+				$(".hv>a").click(function(event){	event.preventDefault();
+				if($(this).parent().hasClass("dropdown")){	$(this).parent().removeClass("dropdown");
+				$(this).siblings().children().removeClass("dropdown");	}else{
+				$(this).parent().addClass("dropdown");	$(this).parent().siblings().removeClass("dropdown");
+				$(this).parent().siblings().children().children().removeClass("dropdown");	}	return false;
+				});	$(document).mouseup(function (e){	var container = $('.mnav , .bar');
+				if (!container.is(e.target) && container.has(e.target).length === 0){
+				$('.mnav').removeClass('dropdown');	}
+				});
+				</script>
+			</div>
+		</div>
+    </header>
+	<div class="content_for_layout">
+		<div class="container">
+			<div class="row">
+				<div class="block_left plr10 span9 span-t8 span-m12">
+					<div class="breadcrumb">
+						<ul class="fixf">
+							<li><a href="" rel="nofollow">Trang chủ</a></li>
+							<li><a href="">Đơn hàng của bạn</a></li>
+						</ul>
+					</div>
+					<div class="cart_item mb20">
+						<table class="m-off">
+							<thead>
+								<tr>
+									<th class="image">Ảnh sp</th>
+									<th class="title">Sản phẩm</th>
+									<th class="quantity">Số lượng</th>
+									<th class="price">Giá bán</th>
+									<th class="total">Tổng cộng</th>
+									<th class="delete">Xoá</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a><img class="imgf" src="img/11.jpg" alt="" ></a></td>
+									<td><h4 class="title4"><a href="">váng sữa thỏ burine</a></h4></td>
+									<td>
+										<form name="view0" action="" method="post">
+											<input type="number" name="soluong" value="1" min="1" max="999" class="input_control">
+											<input type="submit" value="Cập nhật" class="button red">
+										</form>
+									</td>
+									<td><span class="price">120.000₫</span></td>
+									<td><span class="price_sum">120.000₫</span></td>
+									<td><a href=""><span class="ico4"><i class="fa fa-trash"></i></span></a></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="fixf cart_form m-on">
+							<div class="title_cart">Sản phẩm</div>
+							<div class="list_detail">
+								<div class="prd_row">
+									<div class="image_prd">
+										<a href="">
+											<img class="imgf" src="img/11.jpg" alt="">
+										</a>
+									</div>
+									<div class="info_prd">
+										<a href="" class="title_prd"> váng sữa thỏ burine</a>
+										<p class="price">120,000 ₫</p>
+										<div class="block_group">
+											<form name="view0" action="" method="post">
+												<button onclick="var result = document.getElementById('qty');var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty > 1 ) result.value--;return false;">-</button>
+												<input type="text" name="soluong" value="1" class="input-control" id="qty">
+												<button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;">+</button>
+												<button type="submit" style="margin-left:5px;"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+											</form>
+										</div>
+										<p class="">Thành tiền :120,000 ₫</p>
+									</div>
+									<a href="" class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+								</div>
+							</div>
+							<div class="cart_buy fixf mb10">
+								<p> <span class="cart_sum_title">Tổng tiền :</span> <span class="cart_sum_price">9,980,000 ₫</span> </p>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="mb20 title_center">
+						<h3>THÔNG TIN KHÁCH HÀNG</h3>
+					</div>
+					<form id="signupForm" action="/view-shopingcart/" method="post" class="form_contact">
+						<div class="form_group">
+							<div class="fg1">Họ và tên (<span style="color: #f00">*</span>)</div>
+							<div class="fg2"><input type="text" class="form_text3" name="name" id="name" placeholder="Tên của bạn"></div>
+						</div>
+						<div class="clear"></div>
+						<div class="form_group">
+							<div class="fg1">Số điện thoại (<span style="color: #f00">*</span>)</div>
+							<div class="fg2"><input type="text" class="form_text3" name="phone" id="phone" placeholder="Số điện thoại liên lạc"></div>
+						</div>
+						<div class="clear"></div>
+						<div class="form_group">
+							<div class="fg1">Email (<span style="color: #f00">*</span>)</div>
+							<div class="fg2"><input type="email" class="form_text3" name="email" id="email" placeholder="Địa chỉ email"></div>
+						</div>
+						<div class="clear"></div>
+						<div class="form_group">
+							<div class="fg1">Địa chỉ nhận hàng</div>
+							<div class="fg2"><input type="text" class="form_text3" name="address" id="address" placeholder="Địa chỉ nhận hàng"></div>
+						</div>
+						<div class="clear"></div>
+						<div class="form_group">
+							<div class="fg1">Ghi chú</div>
+							<div class="fg2"><textarea class="form_text4" rows="3" name="content"></textarea></div>
+						</div>
+						<div class="clear"></div>
+
+							<div class="clear"></div>
+						<div class="form_group">
+							<div class="fg1"> &nbsp </div>
+							<div class="fg2">
+								<input type="hidden" value="" name="total">
+								<button type="submit" class="confirmed_orders">Thực hiện đặt hàng <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="block_right plr10 span3 span-t4 span-m12">
+					<div class="block_panel mb20 ">
+						<div class="head_panel">
+							<h5>Sản Phẩm Mới</h5>
+						</div>
+						<div class="body_panel">
+							<div class="wrapper_panel">
+								<ul class="list_prd_widget p10">
+									<li><a href=""><img src="img/11.jpg"></a><h4><a href="">Váng Sữa thỏ burine</a></h4><p>100,000 ₫</p></li>
+									<li><a href=""><img src="img/11.jpg"></a><h4><a href="">Váng Sữa thỏ burine</a></h4><p>100,000 ₫</p></li>
+									<li><a href=""><img src="img/11.jpg"></a><h4><a href="">Váng Sữa thỏ burine</a></h4><p>100,000 ₫</p></li>
+									<li><a href=""><img src="img/11.jpg"></a><h4><a href="">Váng Sữa thỏ burine</a></h4><p>100,000 ₫</p></li>
+									<li><a href=""><img src="img/11.jpg"></a><h4><a href="">Váng Sữa thỏ burine</a></h4><p>100,000 ₫</p></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="block_panel mb20 ">
+						<div class="head_panel">
+							<h5>Các Danh Mục Sản Phẩm</h5>
+						</div>
+						<div class="body_panel">
+							<ul class="list_prd">
+								<li><a href="">Bánh kẹo-đồ ăn vặt</a></li>
+								<li><a href="">Bánh kẹo-đồ ăn vặt</a></li>
+								<li><a href="">Bánh kẹo-đồ ăn vặt</a></li>
+								<li><a href="">Bánh kẹo-đồ ăn vặt</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="block_panel mb20 ">
+						<div class="head_panel">
+							<h5>Hỗ trợ khách hàng</h5>
+						</div>
+						<div class="body_panel">
+							<div class="support_block">
+								<img src="img/hotline2.png" alt="">
+								<p>
+									<span>Hotline 1</span>
+									<a href="">0988.851.155</a>
+								</p>
+							</div>
+							<div class="support_block">
+								<img src="img/hotline2.png" alt="">
+								<p>
+									<span>Hotline 2</span>
+									<a href="">0988.851.155</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<ul class="fixf owl arr_bx trademark nostyle">
+			<li><a href=""><img src="img/5.jpg" alt=""></a></li>
+			<li><a href=""><img src="img/5.jpg" alt=""></a></li>
+			<li><a href=""><img src="img/5.jpg" alt=""></a></li>
+			<li><a href=""><img src="img/5.jpg" alt=""></a></li>
+			<li><a href=""><img src="img/5.jpg" alt=""></a></li>
+			<li><a href=""><img src="img/5.jpg" alt=""></a></li>
+		</ul>
+	</div>
+	<script>
+	$(document).ready(function(){
+	$('.trademark').slick({
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	autoplay: false,
+	autoplaySpeed: 2000,
+	responsive: [{ breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 2, } },]
+	});
+	});
+	</script>
+    <footer>
+		<div class="container">
+			<div class="top_ft fixf center plr10 ptb10 mb20">
+				<div class="form_email">
+					<div class="span6 span-m12"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+						<h3>Đăng ký nhận email của chúng tôi</h3>
+						<p>Để nhận ngay những chương trình khuyễn mãi</p>
+					</div>
+					<div class="span6 span-m12">
+						<form action="" method="post">
+							<input type="email" name="email" placeholder="Nhập email của bạn... ">
+							<button type="submit">Đăng ký</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="mid_ft">
+				<div class="row">
+					<div class="span6 plr10 span-m12 mb20">
+						<div class="image span-m12 mb10">
+							<a href=""><img src="img/logo.png" alt=""></a>
+						</div>
+						<div class="info">
+							<p><strong><i class="fa fa-map-marker" aria-hidden="true"></i>Địa chỉ:</strong> Số 19 ngõ 52 Khu phố Thượng, Từ Sơn, Bắc Ninh.</p>
+							<p><strong><i class="fa fa-phone" aria-hidden="true"></i>Điện thoại:</strong> 098 851 155-<strong>hotline:</strong>09888511556</p>
+							<p><strong><i class="fa fa-envelope" aria-hidden="true"></i>Email:</strong> support@gmail.com</p>
+							<p><strong><i class="fa fa-globe" aria-hidden="true"></i>website:</strong>demo.vn</p>
+						</div>
+					</div>
+					<div class="span6 mb20 span-m12">
+						<div class="span6 span-m12 plr10 mb20">
+							<h3>Thông tin hỗ trợ</h3>
+							<ul class="list_link">
+								<li><a href="">Giới thiệu</a></li>
+								<li><a href="">Thông tin thanh toán</a></li>
+								<li><a href="">Kiểm tra đơn hàng</a></li>
+								<li><a href="">Trung tâm hỗ trợ khách hàng</a></li>
+							</ul>
+						</div>
+						<div class="span6 span-m12 plr10 mb20">
+							<h3>chính sách</h3>
+							<ul class="list_link">
+								<li><a href="">Chính sách bảo hành </a></li>
+								<li><a href="">Chính sách đổi trả</a></li>
+								<li><a href="">Chính sách giao hàng</a></li>
+								<li><a href="">Chính sách thanh toán</a></li>
+								<li><a href="">Chính sách khách hàng</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bot_ft">
+                <p>© Copyright kars group</p>
+                <p style="float:right">Design by <a href="" target="_blank" style="color:#fff">kars Group</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

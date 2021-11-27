@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
@@ -49,10 +50,13 @@
             </div>
         </nav>
         <!-- end nav  -->
+        @php
+            $a = session('Model_active');
+        @endphp
         <div id="page-body" class="d-flex">
             <div id="sidebar" class="bg-white">
                 <ul id="sidebar-menu">
-                    <li class="nav-link">
+                    <li class="nav-link {{$a=='dashboard'?'active':''}}">
                         <a href="{{url('dashboard')}}">
                             <div class="nav-link-icon d-inline-flex">
                                 <i class="far fa-folder"></i>
@@ -61,7 +65,7 @@
                         </a>
                         <i class="arrow fas fa-angle-right"></i>
                     </li>
-                    <li class="nav-link">
+                    <li class="nav-link  {{$a=='pages'?'active':''}}">
                         <a href="{{url('admin/page/list')}}">
                             <div class="nav-link-icon d-inline-flex">
                                 <i class="far fa-folder"></i>
@@ -75,7 +79,7 @@
                             <li><a href="{{url('admin/page/list')}}">Danh sách</a></li>
                         </ul>
                     </li>
-                    <li class="nav-link">
+                    <li class="nav-link {{$a=='posts'?'active':''}}">
                         <a href="{{url('admin/post/list')}}">
                             <div class="nav-link-icon d-inline-flex">
                                 <i class="far fa-folder"></i>
@@ -89,7 +93,7 @@
                             <li><a href="{{url('admin/post/cat/list')}}">Danh mục</a></li>
                         </ul>
                     </li>
-                    <li class="nav-link active">
+                    <li class="nav-link {{$a=='products'?'active':''}} ">
                         <a href="{{url('admin/product/list')}}">
                             <div class="nav-link-icon d-inline-flex">
                                 <i class="far fa-folder"></i>
@@ -101,6 +105,19 @@
                             <li><a href="{{url('admin/product/add')}}">Thêm mới</a></li>
                             <li><a href="{{url('admin/product/list')}}">Danh sách</a></li>
                             <li><a href="{{url('admin/product/cat/list')}}">Danh mục</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-link {{$a=='sliders'?'active':''}} ">
+                        <a href="{{url('admin/slider/list')}}">
+                            <div class="nav-link-icon d-inline-flex">
+                                <i class="far fa-folder"></i>
+                            </div>
+                            Slider
+                        </a>
+                        <i class="arrow fas fa-angle-down"></i>
+                        <ul class="sub-menu">
+                            <li><a href="{{url('admin/slider/add')}}">Thêm mới</a></li>
+                            <li><a href="{{url('admin/slider/list')}}">Danh sách</a></li>
                         </ul>
                     </li>
                     <li class="nav-link">
@@ -115,7 +132,7 @@
                             <li><a href="{{url('admin/order/list')}}">Đơn hàng</a></li>
                         </ul>
                     </li>
-                    <li class="nav-link">
+                    <li class="nav-link {{$a=='users'?'active':''}}">
                         <a href="{{url('admin/user/list')}}">
                             <div class="nav-link-icon d-inline-flex">
                                 <i class="far fa-folder"></i>
@@ -128,6 +145,19 @@
                             <li><a href="{{url('admin/user/register')}}">Thêm mới</a></li>
                             <li><a href="{{url('admin/user/list')}}">Danh sách</a></li>
                             <li><a href="{{url('admin/user/change')}}">Đổi mật khẩu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-link {{$a=='roles'?'active':''}}">
+                        <a href="{{url('admin/role/list')}}">
+                            <div class="nav-link-icon d-inline-flex">
+                                <i class="far fa-folder"></i>
+                            </div>
+                                Phân quyền
+                        </a>
+                        <i class="arrow fas fa-angle-right"></i>
+
+                        <ul class="sub-menu">
+                            <li><a href="{{url('admin/role/list')}}">Bảng phân quyền</a></li>
                         </ul>
                     </li>
 

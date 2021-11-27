@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+    public function __construct(){
+        $this->middleware(function($request , $next){
+            session(['Model_active' =>'users']);
+           return $next($request);
+        });
+    }
         public function list(Request $request)
         {
             $status =$request->input('status');
